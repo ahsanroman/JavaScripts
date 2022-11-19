@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Even or Odd</h1>
+    <h1>Please add any number to check Even Odd</h1>
+    <form onsubmit="evenodd(); return false;">
+        <!-- return false used for to prevent the to relod the page while event listening -->
+
+        <lable for="Enter Number">Enter Number</lable><br>
+        <input type="number1" id="number1" placeholder="Enter Number"><br>
+        
+        <!-- <lable for="Obtained marks">Obtaned Marks</lable><br>
+        <input type="number" id="obtainedmarks" placeholder="Obtained Marks"><br> -->
+        <br>
+        <button type="submit">Calculate</button>
+        </form>
+
+        <h2 id="result"></h2>
+<script>
+    function evenodd(){
+    let num1 = document.querySelector("#number1").value;
+    // let num2 = num1 % 2;
+    if(num1 % 2 == 0){
+        document.querySelector("#result").innerHTML = num1 + " is Even ";
+    }
+    else{
+        document.querySelector("#result").innerHTML = num1 + " is ODD ";
+    }
+}
+
+
+</script>
+</body>
+</html>
